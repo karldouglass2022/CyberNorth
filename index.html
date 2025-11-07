@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="template" content="Modern Store Modified 1.14">
+
+<title>User Login</title>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./BruteforceLogin/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ct-modern-store-google-fonts-css" href="./BruteforceLogin/css" type="text/css" media="all">
+<link rel="stylesheet" id="ct-modern-store-font-awesome-css" href="./BruteforceLogin/all.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ct-modern-store-style-css" href="./BruteforceLogin/style.css" type="text/css" media="all">
+<style id="ct-modern-store-style-inline-css" type="text/css">
+@media all and (min-width: 50em) {
+				.title-container {
+					margin: 0.75em 3em 0.75em 0;
+				}
+				.rtl .title-container {
+					margin: 0.75em 0 0.75em 3em;
+				}
+			}
+</style>
+<script type="text/javascript" src="./BruteforceLogin/jquery.min.js.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="./BruteforceLogin/jquery-migrate.min.js.download" id="jquery-migrate-js"></script>
+<meta name="msapplication-TileImage" content="https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/cropped-5.png?fit=270%2C270&amp;ssl=1">
+		<style type="text/css" id="wp-custom-css">
+			#xpath-table{max-width:960px;margin:0 auto;padding:0;}
+#courses_table{width:100%;}
+
+.controls{margin:12px 0 8px;}
+.controls-title{margin:0 0 10px;}
+
+.filter-columns{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+
+.filter-group{
+  border:1px solid #D9D9D9;
+  border-radius:10px;
+  padding:10px 12px;
+  background:#fff;
+}
+.filter-group legend{font-weight:700;padding:0 6px;}
+
+.filter-group.vertical label{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:6px 0;
+}
+.filter-group.vertical input{margin:0;}
+
+.block-label{display:block;font-weight:700;margin-bottom:6px;}
+
+
+/* force the separator to take a full row regardless of parent layout */
+.controls-sep{
+  height:1px;
+  background:#EEE;
+  margin:16px 0 0;
+  display:block;
+  width:100%;
+  clear:both;          /* break floats */
+  grid-column:1 / -1;  /* if inside any grid */
+  flex-basis:100%;     /* if inside any flex */
+}
+
+/* put Sort row on its own full row below the line */
+.sort-row{
+  display:flex; 
+  align-items:center; 
+  gap:10px;
+  padding-top:12px;
+  width:100%;
+  grid-column:1 / -1;  /* if parent is grid */
+  flex-basis:100%;     /* if parent is flex */
+}
+.sort-row label{ font-weight:700; }
+
+
+
+.sort-row select {
+  width: 220px;         /* optional: control width */
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 1rem;
+  transition: border-color .2s, box-shadow .2s;
+  cursor: pointer;
+}
+.sort-row select:hover {
+  border-color: #FFC270;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+.sort-row select:focus {
+  outline: none;
+  border-color: #FFC270;
+  box-shadow: 0 0 0 3px rgba(255,194,112,.3);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+
+
+</style></head>
+
+<body id="modern-store-modified" class="wp-singular page-template page-template-simple_login page-template-simple_login-php page page-id-251 wp-custom-logo wp-theme-modern-store-modified full-post">
+			<a class="skip-content" href="https://practicetestautomation.com/practice-test-login/#main-container">Press "Enter" to skip to content</a>
+	<div id="overflow-container" class="overflow-container">
+		<div id="max-width" class="max-width">
+						
+									<section id="main-container" class="main-container" role="main">
+				
+<section id="login">
+	<img src="gdrivelogo.png" class="center" width="100px" height="100px">
+	<h2>User Account Login</h2>
+	<ul>
+		<li>Login with your username and password</li>
+	</ul>
+	<div id="form">
+		<div>
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username">
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password">
+		</div>
+		<button id="submit" class="btn">Submit</button>
+	</div>
+	<div id="error">Your username is invalid!</div>
+			</section>	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const username = document.querySelector("#username"),
+				password = document.querySelector("#password"),
+				submit = document.querySelector("#submit"),
+				error = document.querySelector("#error");
+
+			submit.addEventListener("click", function () {
+				let us_name = username.value,
+					us_pass = password.value;
+
+				if(us_name == "trinitysneakeruk@gmail.com" && us_pass == "Luna20102014"){
+					window.location.href = "loginSuccess.html";
+				}else if(us_name == "trinitysneakeruk@gmail.com" && us_pass != "Luna20102014"){
+					error.innerHTML = "Your password is invalid!";
+					error.classList.add("show");
+					username.value = "";
+					password.value = "";
+				}else{
+					error.innerHTML = "Your username is invalid!";
+					error.classList.add("show");
+					username.value = "";
+					password.value = "";
+				}
+			})
+		})
+	</script>
+
+</section> <!-- .main-container -->
+
+
+</div><!-- .max-width -->
+</div><!-- .overflow-container -->
+
+</body></html>
